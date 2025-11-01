@@ -3,7 +3,8 @@ export const PERSONAL_INFO = {
   greeting: 'Hey!',
   titles: ['Yuliia Chimyrys', 'Yuchi', '@insomniacengineer'],
   description:
-    "I'm Software Engineer@Microsoft passionate about learning, creativity and distributed systems.",
+    "I'm a Software Engineer @ Microsoft — passionate about distributed systems, AI (from cat videos to RAG), creativity, and learning something new every day.",
+  joke: '(ideally before production finds out)',
 };
 
 export const TYPEWRITER_CONFIG = {

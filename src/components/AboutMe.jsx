@@ -17,6 +17,7 @@ export default function AboutMe() {
           />
         </h2>
         <p>{PERSONAL_INFO.description}</p>
+        <p className="joke">{PERSONAL_INFO.joke}</p>
       </div>
     </section>
   );

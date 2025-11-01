@@ -1,0 +1,143 @@
+/* About Me Section */
+.about-me {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  min-height: 100vh;
+  padding: 0 5%;
+  background-color: #f7f7f7;
+  font-family: 'Inter', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  order: 2;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.about-text {
+  order: 1;
+  text-align: center;
+  flex: 1;
+  max-width: 60%;
+}
+
+.about-text h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 7rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.about-text h2 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-top: 0;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.about-text p {
+  color: #555;
+  font-size: 1.1rem;
+  max-width: 1000px;
+}
+
+.about-text .joke {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .about-me {
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px 5%;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+    order: 1;
+    flex-shrink: 0;
+  }
+
+  .about-text {
+    order: 2;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .about-text .joke {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me {
+    gap: 30px;
+    padding: 15px 3%;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .about-text .joke {
+    font-size: 0.7rem;
+  }
+}

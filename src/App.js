@@ -1,8 +1,8 @@
 import './App.css';
 import AboutMe from './components/AboutMe';
-import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Navigation from './components/Navigation';
+import Experience from './components/Experience';
 
 function App() {
   return (

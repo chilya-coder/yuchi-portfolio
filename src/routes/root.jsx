@@ -1,18 +1,18 @@
 import { Outlet, NavLink } from 'react-router-dom';
 import '../components/Navigation.css';
-import { FaLinkedin } from 'react-icons/fa';
+
+const navLinks = [
+  { to: '/about', label: 'About' },
+  { to: '/experience', label: 'Work' },
+  { to: '/projects', label: 'Projects' },
+];
 
 export default function Root() {
-  const navLinks = [
-    { to: '/about', label: 'About Me' },
-    { to: '/experience', label: 'Experience' },
-    { to: '/projects', label: 'Projects' },
-  ];
   return (
     <>
       <header className="top-nav">
         <div className="name">Yuliia Chimyrys</div>
-        <nav className="nav-links">
+        <nav className="nav-links" aria-label="Primary">
           {navLinks.map(link => (
             <NavLink
               key={link.to}
@@ -26,10 +26,9 @@ export default function Root() {
             href="https://www.linkedin.com/in/yuliia-chimyrys-software-engineer001/"
             target="_blank"
             rel="noopener noreferrer"
-            className="linkedin-btn"
-            aria-label="LinkedIn Profile"
+            className="linkedin-link"
           >
-            <FaLinkedin size={22} />
+            LinkedIn
           </a>
         </nav>
       </header>

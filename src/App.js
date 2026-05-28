@@ -9,13 +9,13 @@ function App() {
     <div className="App">
       <Navigation />
       <main>
-        <section id="about" className="section">
+        <section id="about" className="section section-hero">
           <AboutMe />
         </section>
-        <section id="experience" className="section">
+        <section id="experience" className="section section-work">
           <Experience />
         </section>
-        <section id="projects" className="section">
+        <section id="projects" className="section section-projects">
           <Projects />
         </section>
       </main>

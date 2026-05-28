@@ -1,224 +1,132 @@
 .experience {
-  width: 100vw;
-  min-height: 100vh;
-  margin: 0;
-  padding: 4rem 0;
-  font-family:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: #f3f2ef;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100%;
 }
 
-.experience-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 2rem;
+.experience-header {
+  margin-bottom: var(--space-12);
 }
 
-.experience h1 {
-  font-size: 2.5rem;
+.experience-header h2 {
+  font-size: var(--text-2xl);
   font-weight: 600;
-  color: #0a66c2;
-  text-align: center;
-  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--text);
 }
 
-.timeline {
-  position: relative;
-  padding-left: 60px;
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
 }
 
-/* Simple straight timeline line */
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 20px;
-  top: 0;
-  width: 2px;
-  height: 100%;
-  background: #e1e5e9;
-  z-index: 1;
+.experience-entry {
+  padding-bottom: var(--space-12);
+  border-bottom: 1px solid var(--border);
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 3rem;
+.experience-entry:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.experience-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.experience-entry-title {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
+  gap: var(--space-4);
+  min-width: 0;
 }
 
-.timeline-left {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 1rem;
-  position: relative;
-  left: -40px;
-  margin-top: 0.25rem;
-}
-
-/* Simple dots */
-.timeline-dot {
-  width: 16px;
-  height: 16px;
-  background: #0a66c2;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  z-index: 2;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
-}
-
-/* Company logos */
 .company-logo {
-  width: 40px;
-  height: 40px;
-  background: #fff;
-  border-radius: 6px;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e1e5e9;
-  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  overflow: hidden;
 }
 
 .company-logo img {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
-  border-radius: 4px;
 }
 
-.company-logo span {
-  color: #fff;
-  font-size: 1.2rem;
+.company-logo-fallback {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
   font-weight: 600;
-  letter-spacing: 0.5px;
-  background: linear-gradient(135deg, #0a66c2, #004182);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
+  color: var(--text-secondary);
 }
 
-/* Clean content design */
-.timeline-content {
-  background: transparent;
-  border: none;
-  padding: 0;
-  flex: 1;
-}
-
-.timeline-content h3 {
-  font-size: 1.5rem;
+.experience-entry-header h3 {
+  font-size: var(--text-lg);
   font-weight: 600;
-  color: #1d1d1d;
-  margin: 0 0 0.25rem 0;
-  line-height: 1.3;
+  margin: 0 0 var(--space-1);
+  letter-spacing: -0.01em;
+  color: var(--text);
 }
 
-.timeline-content h4 {
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: #0a66c2;
-  margin: 0 0 0.25rem 0;
-}
-
-.timeline-content .date {
-  font-size: 0.9rem;
-  color: #666;
-  margin: 0 0 1rem 0;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.timeline-content ul {
-  list-style: none;
-  padding: 0;
+.experience-company {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
   margin: 0;
-  text-align: left;
 }
 
-.timeline-content li {
-  font-size: 0.95rem;
-  color: #4a4a4a;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
-  padding-left: 1.25rem;
+.experience-date {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.experience-entry ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.experience-entry li {
   position: relative;
-  transition: color 0.2s ease;
-  text-align: left;
+  padding-left: var(--space-4);
+  margin-bottom: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
-.timeline-content li::before {
-  content: '▸';
-  color: #0a66c2;
+.experience-entry li::before {
+  content: '·';
   position: absolute;
   left: 0;
-  font-weight: 600;
+  color: var(--text-tertiary);
 }
 
-.timeline-content li:hover {
-  color: #2c3e50;
-}
-
-.timeline-content li:last-child {
+.experience-entry li:last-child {
   margin-bottom: 0;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .experience {
-    padding: 2rem 0;
+@media (max-width: 640px) {
+  .experience-entry-header {
+    flex-direction: column;
+    gap: var(--space-2);
   }
 
-  .experience-container {
-    padding: 0 1rem;
-  }
-
-  .experience h1 {
-    font-size: 2rem;
-  }
-
-  .timeline {
-    padding-left: 50px;
-  }
-
-  .timeline::before {
-    left: 15px;
-  }
-
-  .timeline-left {
-    left: -35px;
-  }
-
-  .company-logo {
-    width: 35px;
-    height: 35px;
-  }
-
-  .company-logo span {
-    font-size: 1rem;
-  }
-
-  .timeline-content h3 {
-    font-size: 1.25rem;
-  }
-
-  .timeline-content h4 {
-    font-size: 1rem;
-  }
-
-  .timeline-content li {
-    font-size: 0.9rem;
-    padding-left: 1rem;
+  .experience-date {
+    white-space: normal;
   }
 }
